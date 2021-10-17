@@ -42,7 +42,7 @@ class PaymentController extends Controller
                 'total_amount' => $paymentDetails['data']['amount'] / 100,
                 'shipping_fee' => $paymentDetails['data']['metadata']['fee']]);
 
-            Product::where('id', $product_id)->update(['status' => 'sold']);
+            Product::where('id', $product_id)->update(['status' => 'paid']);
 
             return view('payment.callback')->with('res', $paymentDetails);
         }

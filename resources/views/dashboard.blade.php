@@ -9,9 +9,9 @@
                         {{Auth()->user()->name}}</small> </p>
                 <div class="row p-5 lm-bold justify-content-center" style="margin-top: 80px">
                     <div class="col-lg-4 col-md-4 mb-3">
-                        <li class="list-group-item list-group-item-action d-flex justify-content-between">Users
-                            <span class="badge badge-secondary" style="font-size: large;">{{$users_count}}</span> </li>
-                        <a href="users.php" class="d-flex justify-content-between bg-secondary nav-link text-white">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between">All Orders
+                            <span class="badge badge-secondary" style="font-size: large;">{{$orders_count}}</span> </li>
+                        <a href="/order" class="d-flex justify-content-between bg-secondary nav-link text-white">
                             View Details <i class="fa fa-arrow-right orange"></i></a>
                     </div>
                     <div class="col-lg-4 col-md-4 mb-3 ">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionController;
 use App\Models\Category;
@@ -40,6 +41,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('/category', CategoryController::class);
 Route::resource('/product', ProductController::class);
+Route::resource('/order', OrderController::class);
 Route::get('/private', [HomeController::class, 'private']);
 
 Route::get('session/get', [SessionController::class, 'accessSessionData']);

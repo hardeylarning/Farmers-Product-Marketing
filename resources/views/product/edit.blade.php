@@ -4,7 +4,7 @@
     <div class="container" style="margin-bottom: 150px; margin-top: 150px;">
         <div class="row">
             <div class="col-md-6 offset-md-3 shadow">
-                <h1 class=" text-center mt-3 mb-0 lg-font">ADD NEW PRODUCT</h1>
+                <h1 class=" text-center mt-3 mb-0 lg-font ">Edit -- {{$product->name}}</h1>
                 @if($errors->any())
                     <div class="m-auto mx-5">
                         <ul class="navbar-nav">

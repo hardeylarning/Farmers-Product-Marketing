@@ -64,6 +64,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if(Auth::user()->isAdmin == 1)
+                                        <a class="dropdown-item" href="/dashboard">Admin</a>
+                                        <a class="dropdown-item" href="/product">All Products</a>
+                                        <a class="dropdown-item" href="/product/create">Add Product</a>
+                                        <a class="dropdown-item" href="/category">All Categories</a>
+                                        <a class="dropdown-item" href="/category/create">Add Category</a>
+                                        <a class="dropdown-item" href="/order">All Orders</a>
+
+                                        @else
+                                            <a class="dropdown-item" href="/home">Dashboard</a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

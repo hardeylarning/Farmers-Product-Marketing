@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['auth', 'isAdmin']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +20,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('order.index')
+            ->with('orders', Order::orderBy('updated_at', 'DESC')->get());
     }
 
     /**
@@ -45,7 +53,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -62,13 +70,14 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update( $id)
     {
-        //
+        Product::where('id', $id)->update([
+            'status' => 'Delivered']);
+        return redirect('/order')->with('message', 'Order has been successfully changed Delivered!');
     }
 
     /**
@@ -79,6 +88,8 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = Order::where('id', $id);
+        $order->delete();
+        return redirect('/order')->with('message', 'Order has been successfully deleted');
     }
 }
