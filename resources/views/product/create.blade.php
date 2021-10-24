@@ -36,9 +36,16 @@
                     <div class="form-group mb-4">
                         <label for="category">Category</label>
                         <select name="category" id="category" class="form-control" required>
-                            @foreach($categories as $category)
-                                <option value="{{$category->title}}">{{$category->title}}</option>
-                            @endforeach
+                            <option value="Fruits">Fruits</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Legumes">Legumes</option>
+                            <option value="Tubers">Tubers</option>
+                            <option value="Grains">Grains</option>
+                            <option value="Spicies">Spicies</option>
+                            <option value="Dry Fruits and Nuts">Dry Fruits and Nuts</option>
+{{--                            @foreach($categories as $category)--}}
+{{--                                <option value="{{$category->title}}">{{$category->title}}</option>--}}
+{{--                            @endforeach--}}
                         </select>
                     </div>
                     <div class="from-group mb-4">

@@ -3,7 +3,50 @@
 @section('content')
 
         <div class="container-fluid ">
-            <h1 class="text-center bg-dark text-white display-4 p-3 my-5">Nigeria No. 1 Farmers' Product Marketplace</h1>
+            <h1 class="text-center bg-title text-white display-4 p-3 my-5">Nigeria No. 1 Farmers' Product Marketplace</h1>
+        </div>
+        <div class="container">
+            <div id="slide" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li class="active" data-target="#slide" data-slide-to="0"></li>
+                    <li data-target="#slide" data-slide-to="1"></li>
+                    <li data-target="#slide" data-slide-to="2"></li>
+                    <li data-target="#slide" data-slide-to="3"></li>
+                    <li data-target="#slide" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('images/1.jpg')}}" alt="" class="d-block w-100" height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="display-5 bg-dark">Best farm products can only be getting from us</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/2.jpg')}}" alt="" class="d-block w-100" height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="display-5">We are your plug everyday and everywhere with reliable products and fastest delivery nationwide</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/3.jpg')}}" alt="" class="d-block w-100" height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="display-5">Recommend us to people in your area.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/4.jpg')}}" alt="" class="d-block w-100" height="500">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="display-5">Are you still doubting us, A trial will convince you.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#slide" class="carousel-control-prev" data-slide="prev" role="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#slide" class="carousel-control-next" data-slide="next" role="button">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
         </div>
         <div class="container">
             <div class="container mb-5">
