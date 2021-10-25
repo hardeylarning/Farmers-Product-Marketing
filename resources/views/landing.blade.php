@@ -48,6 +48,90 @@
                 </a>
             </div>
         </div>
+        <div class="container-fluid my-5">
+            <h1 class="text-white">Categories</h1>
+            <div class="row m-2">
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/fruits.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Fruits</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/vegetables.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Vegetables</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/legumes.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Legumes</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/tubers.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Tubers</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/grains.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Grains</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/spicies.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Spicies</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-3">
+                    <div class="card">
+                        <a href="/product/fruits">
+                            <img src="{{ asset('images/nuts.jpeg')}}" alt="" height="200" class="card-img-top">
+                        </a>
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Dry Fruits and Nuts</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="container mb-5">
                 <div class="mt-2">
