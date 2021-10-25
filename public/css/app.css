@@ -66,11 +66,14 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .bg-custom {
+    background-color: #38c172;
+}
+.bg-custom2 {
     background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
 }
 
 .bg-title {
-    background-image: linear-gradient(to bottom, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    background-color: #1a3e3c;
 }
 
 .box{
