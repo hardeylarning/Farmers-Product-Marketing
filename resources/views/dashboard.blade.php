@@ -1,47 +1,116 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid mt-3 bg-dark" style="height: 800px">
-        <div class="row d-flex flex-fill">
-            <div class="col-md mb-3">
-                <p class="lead mt-2 display-4 text-center xl-font lm-bold text-white-50 mb-4">
-                    Welcome to admin <small class="lm-bold-italic large-font text-white">
-                        {{Auth()->user()->name}}</small> </p>
-                <div class="row p-5 lm-bold justify-content-center" style="margin-top: 80px">
-                    <div class="col-lg-4 col-md-4 mb-3">
-                        <li class="list-group-item list-group-item-action d-flex justify-content-between">All Orders
-                            <span class="badge badge-secondary" style="font-size: large;">{{$orders_count}}</span> </li>
-                        <a href="/order" class="d-flex justify-content-between bg-secondary nav-link text-white">
-                            View Details <i class="fa fa-arrow-right orange"></i></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 mb-3 ">
-                        <li class="list-group-item list-group-item-action list-group-item-danger text-dark d-flex justify-content-between">
-                            Categories<span class="badge badge-danger" style="font-size: large;">{{$categories_count}}</span> </li>
-                        <a href="/category" class="d-flex justify-content-between bg-danger nav-link text-white">
-                            View Details <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 mt-2 mb-3">
-                        <li class="list-group-item list-group-item-action list-group-item-dark text-dark d-flex justify-content-between">
-                            Products<span class="badge badge-dark" style="font-size: large;">{{$products_count}}</span> </li>
-                        <a href="/product" class="d-flex justify-content-between bg-secondary nav-link text-white lm-bold">
-                            View Details <i class="fa fa-arrow-right"></i></a>
-                    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 card bg-dark">
+                <div class="justify-content-center mt-5 text-center">
+                    <a class="nav-link text-white" href="/product" style="font-size: 20px;">All Products</a>
+                    <hr class="bg-light">
+                </div>
+                <div class="justify-content-center text-center">
+                    <a class="nav-link text-white" href="/order" style="font-size: 20px;">All Orders</a>
+                    <hr class="bg-light">
+                </div>
+                <div class="justify-content-center text-center">
+                    <a class="nav-link text-white" href="/category" style="font-size: 20px;">All Categories</a>
+                    <hr class="bg-light">
+                </div>
+                <div class="justify-content-center text-center">
+                    <a class="nav-link text-white" href="/product/create" style="font-size: 20px;">Add Product</a>
+                    <hr class="bg-light">
+                </div>
+                <div class="justify-content-center text-center">
+                    <a class="nav-link text-white" href="/category/create" style="font-size: 20px;">Add Category</a>
+                    <hr class="bg-light">
+                </div>
+            </div>
+            <div class="col-md bg-light">
+                <h1 class="font-weight-bold">Dashboard</h1>
+                <div class="row d-flex flex-fill">
+                    <div class="col-md mb-3">
+                        <h2 class="mt-2 pl-3 admin-head rounded-lg">
+                            Welcome to admin <small class="lm-bold-italic large-font text-secondary">
+                                {{Auth()->user()->name}}</small> </h2>
+                        <div class="row p-5 lm-bold justify-content-center">
+                            <div class="col-lg-4 col-md-4 mb-3">
+                                <div class="card text-dark bg-warning mb-3">
+                                    <div class="card-body py-5">
+                                        <h3 class="card-text">All Orders
+                                            <span class="badge badge-light float-right" style="font-size: large;">{{$orders_count}}</span></h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="/order" class="d-flex text-white justify-content-between nav-link">
+                                            View Details <i class="fa fa-arrow-right orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="col-lg-4 col-md-4 mt-2 mb-3">
-                        <li class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between">
-                            Add New Category<span class="badge badge-success" style="font-size: large;"></span> </li>
-                        <a href="/category/create" class="d-flex justify-content-between bg-success nav-link text-white lm-bold">
-                            Click here<i class="fa fa-arrow-right"></i></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 mt-2 mb-3">
-                        <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between">
-                            Add New Product<span class="badge badge-primary" style="font-size: large;"></span> </li>
-                        <a href="/product/create" class="d-flex justify-content-between bg-primary nav-link text-white lm-bold">
-                            Click here <i class="fa fa-arrow-right"></i></a>
-                    </div>
+                            <div class="col-lg-4 col-md-4 mb-3">
+                                <div class="card text-white bg-success mb-3">
+                                    <div class="card-body py-5">
+                                        <h3 class="card-text">All Categories
+                                            <span class="badge badge-light float-right" style="font-size: large;">{{$categories_count}}</span></h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="/category" class="d-flex text-white justify-content-between nav-link">
+                                            View Details <i class="fa fa-arrow-right orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-lg-4 col-md-4 mb-3">
+                                <div class="card text-white bg-primary mb-3">
+                                    <div class="card-body py-5">
+                                        <h3 class="card-text">All Products
+                                            <span class="badge badge-light float-right" style="font-size: large;">{{$products_count}}</span></h3>
+                                    </div>
+                                    <div class="card-footer text-white">
+                                        <a href="/product" class="d-flex text-white justify-content-between nav-link">
+                                            View Details <i class="fa fa-2x text-dark"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <div class="card text-dark bg-info  mb-3">
+                                    <div class="card-body py-5">
+                                        <h3 class="card-text">Add New Category</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="/category/create" class="d-flex text-white justify-content-between nav-link">
+                                            Open... <i class="fa fa-arrow-right orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <div class="card text-white bg-secondary  mb-3">
+                                    <div class="card-body py-5">
+                                        <h3 class="card-text">Add New Product</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="/order" class="d-flex text-white justify-content-between nav-link">
+                                            Open... <i class="fa fa-arrow-right orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+{{--                                <li class="list-group-item list-group-item-action d-flex justify-content-between">All Orders--}}
+{{--                                    <span class="badge badge-secondary" style="font-size: large;">{{$orders_count}}</span> </li>--}}
+{{--                                <a href="/order" class="d-flex justify-content-between bg-secondary nav-link text-white">--}}
+{{--                                    View Details <i class="fa fa-arrow-right orange"></i></a>--}}
+
+{{--                            <div class="col-lg-4 col-md-4 mb-3 ">--}}
+{{--                                <li class="list-group-item list-group-item-action list-group-item-danger text-dark d-flex justify-content-between">--}}
+{{--                                    Categories<span class="badge badge-danger" style="font-size: large;">{{$categories_count}}</span> </li>--}}
+{{--                                <a href="/category" class="d-flex justify-content-between bg-danger nav-link text-white">--}}
+{{--                                    View Details <i class="fa fa-arrow-right"></i></a>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 @endsection

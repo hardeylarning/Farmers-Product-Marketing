@@ -52,6 +52,9 @@ Route::get('session/remove', [SessionController::class, 'deleteSessionData']);
 Route::match(['post', 'get'],'payment/checkout', [ProductController::class, 'checkout']);
 
 Route::match(['post', 'get'],'/search', [ProductController::class, 'search']);
+
+//
+Route::get('/categories/{cat}', [ProductController::class, 'categories']);
 //
 Route::post('/pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->name('pay');
 Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback']);

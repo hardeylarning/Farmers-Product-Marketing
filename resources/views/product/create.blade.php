@@ -36,13 +36,13 @@
                     <div class="form-group mb-4">
                         <label for="category">Category</label>
                         <select name="category" id="category" class="form-control" required>
-                            <option value="Fruits">Fruits</option>
-                            <option value="Vegetables">Vegetables</option>
-                            <option value="Legumes">Legumes</option>
-                            <option value="Tubers">Tubers</option>
-                            <option value="Grains">Grains</option>
-                            <option value="Spicies">Spicies</option>
-                            <option value="Dry Fruits and Nuts">Dry Fruits and Nuts</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="legumes">Legumes</option>
+                            <option value="tubers">Tubers</option>
+                            <option value="grains">Grains</option>
+                            <option value="spicies">Spicies</option>
+                            <option value="nuts">Dry Fruits and Nuts</option>
 {{--                            @foreach($categories as $category)--}}
 {{--                                <option value="{{$category->title}}">{{$category->title}}</option>--}}
 {{--                            @endforeach--}}

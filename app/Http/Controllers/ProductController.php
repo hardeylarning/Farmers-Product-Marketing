@@ -11,8 +11,8 @@ class ProductController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', 'isAdmin'], ['except' => [ 'show', 'search', 'checkout']]);
-         $this->middleware('auth', ['except' => ['show', 'search']]);
+        $this->middleware(['auth', 'isAdmin'], ['except' => [ 'show', 'search', 'checkout', 'categories']]);
+         $this->middleware('auth', ['except' => ['show', 'search','categories']]);
     }
     /**
      * Display a listing of the resource.
@@ -172,6 +172,20 @@ class ProductController extends Controller
             abort('404');
 
 
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  string  $cat
+     * @return \Illuminate\Http\Response
+     *
+     */
+
+    public function categories($cat)
+    {
+        $products = Product::where('category', $cat)->get();
+
+        return view('categories')->with('products',$products);
     }
 
 

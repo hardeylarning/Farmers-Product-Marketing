@@ -3,7 +3,7 @@
 @section('content')
 
         <div class="container-fluid ">
-            <h1 class="text-center bg-title text-white display-4 p-3 my-5">Nigeria No. 1 Farmers' Product Marketplace</h1>
+            <h1 class="text-center bg-dark text-white display-4 p-3 my-5">Nigeria No. 1 Farmers' Product Marketplace</h1>
         </div>
         <div class="container">
             <div id="slide" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -12,7 +12,6 @@
                     <li data-target="#slide" data-slide-to="1"></li>
                     <li data-target="#slide" data-slide-to="2"></li>
                     <li data-target="#slide" data-slide-to="3"></li>
-                    <li data-target="#slide" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -24,19 +23,19 @@
                     <div class="carousel-item">
                         <img src="{{ asset('images/2.jpg')}}" alt="" class="d-block w-100" height="500">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="display-5">We are your plug everyday and everywhere with reliable products and fastest delivery nationwide</p>
+                            <p class="display-5 bg-dark">We are your plug everyday and everywhere with reliable products and fastest delivery nationwide</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('images/3.jpg')}}" alt="" class="d-block w-100" height="500">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="display-5">Recommend us to people in your area.</p>
+                            <p class="display-5 bg-dark">Recommend us to people in your area.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('images/4.jpg')}}" alt="" class="d-block w-100" height="500">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="display-5">Are you still doubting us, A trial will convince you.</p>
+                            <p class="bg-dark">Are you still doubting us, A trial will convince you.</p>
                         </div>
                     </div>
                 </div>
@@ -48,12 +47,13 @@
                 </a>
             </div>
         </div>
+        <hr class="bg-dark">
         <div class="container-fluid my-5">
-            <h1 class="text-white">Categories</h1>
+            <h1 class="">Categories</h1>
             <div class="row m-2">
-                <div class="col-md-4 p-3">
-                    <div class="card">
-                        <a href="/product/fruits">
+                <div class="col-md-4 p-3 rounded-circle">
+                    <div class="card border">
+                        <a href="/categories/fruits">
                             <img src="{{ asset('images/fruits.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-md-4 p-3">
                     <div class="card">
-                        <a href="/product/fruits">
+                        <a href="/categories/vegetables">
                             <img src="{{ asset('images/vegetables.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-4 p-3">
                     <div class="card">
-                        <a href="/product/fruits">
+                        <a href="/categories/legumes">
                             <img src="{{ asset('images/legumes.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -87,7 +87,7 @@
 
                 <div class="col-md-4 p-3">
                     <div class="card">
-                        <a href="/product/fruits">
+                        <a href="/categories/tubers">
                             <img src="{{ asset('images/tubers.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-4 p-3">
                     <div class="card">
-                        <a href="/product/fruits">
+                        <a href="/categories/grains">
                             <img src="{{ asset('images/grains.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-md-4 p-3">
                     <div class="card">
-                        <a href="/product/fruits">
+                        <a href="/categories/spicies">
                             <img src="{{ asset('images/spicies.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -121,7 +121,7 @@
 
                 <div class="col-md-4 p-3">
                     <div class="card">
-                        <a href="/product/fruits">
+                        <a href="/categories/nuts">
                             <img src="{{ asset('images/nuts.jpeg')}}" alt="" height="200" class="card-img-top">
                         </a>
 
@@ -132,6 +132,7 @@
                 </div>
             </div>
         </div>
+        <hr class="bg-dark">
         <div class="container">
             <div class="container mb-5">
                 <div class="mt-2">
@@ -148,9 +149,9 @@
                     </form>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row">
                 @foreach($products as $product)
-                    <div class="col-md-3 mr-2 mb-3">
+                    <div class="col-lg-4 col-md-4 mr-2 mb-3 rounded">
                         <div class="card card-deck">
                             <img src="{{ asset('images/'. $product->image_path)}}" height="150" width="200"  class="card-img-top" alt="" />
                             <div class="card-body">
