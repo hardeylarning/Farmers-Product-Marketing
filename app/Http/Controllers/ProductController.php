@@ -185,7 +185,16 @@ class ProductController extends Controller
     {
         $products = Product::where('category', $cat)->get();
 
-        return view('categories')->with('products',$products);
+        $cat_value= '';
+
+        if ($cat === 'nuts'){
+            $cat_value = 'Dry Fruits and Nuts';
+        }
+        else {
+            $cat_value = $cat;
+        }
+
+        return view('categories', ['products'=> $products, 'cat'=> $cat_value]);
     }
 
 

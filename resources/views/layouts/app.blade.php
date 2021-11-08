@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ mix('font/app.css') }}">
 </head>
 <body class="bg-custom">
     <div id="app">
@@ -88,6 +88,15 @@
                                 </div>
                             </li>
                         @endguest
+
+                    {{--  Search --}}
+                        <li class="nav-item">
+                            <a id="navbarDropdown" class="nav-link" role="button"
+                               data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                            @include('layouts.searchbar')
+                        </li>
                     </ul>
                 </div>
             </div>

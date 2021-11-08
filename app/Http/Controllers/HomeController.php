@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $orders = Order::where('user_id', auth()->user()->id);
+        $orders = Order::where('user_id', auth()->user()->id)->get();
         return view('home')->with('orders', $orders);
     }
 

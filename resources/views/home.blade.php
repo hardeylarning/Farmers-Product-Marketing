@@ -20,17 +20,16 @@
 </div>
 <br/>
     <div class="container mt-5">
-        <div class="row justify-content-between">
+        <div class="row">
             @forelse($orders as $order)
-                <div class="col-md-4">
-                    <p class="mb-2">{{$order->product->name}}</p>
-                    <p class="mb-2">{{$order->product->status}}</p>
-                    <p class="mb-2">{{ date('jS M Y', strtotime($order->payment_date)) }}</p>
-                    <p class="mb-2">{{$order->shipping_address}}</p>
-                    <p class="mb-2">{{$order->product->price}}</p>
-                    <p class="mb-2">{{$order->shipping_fee}}</p>
-                    <p class="mb-2">{{$order->total_amount}}</p>
-                    <p class="mb-2">{{ date('jS M Y', strtotime($order->updated_at)) }}</p>
+                <div class="col-md-5 mr-auto mb-3 " style="font-size: 25px; font-weight: bold">
+                    <p class="mb-2">Order Name: {{$order->product->name}}</p>
+                    <p class="mb-2">Status: {{$order->product->status}}</p>
+                    <p class="mb-2">Shipping Address: {{$order->shipping_address}}</p>
+                    <p class="mb-2">Price: #{{$order->product->price}}</p>
+                    <p class="mb-2">Shipping Fee: #{{$order->shipping_fee}}</p>
+                    <p class="mb-2">Total Cost: #{{$order->total_amount}}</p>
+                    <p class="mb-2">Payment Date: {{ date('jS M Y', strtotime($order->updated_at)) }}</p>
                 </div>
 
             @empty

@@ -8,10 +8,9 @@
                 <div class="col-md-6 offset-md-3 shadow">
                     <h1 class=" text-center mt-3 mb-2">
                         <p>Shipping Address: {{$data['address']}}</p>
-                        <p>Shipping fee: {{$data['fee']}}</p>
-                        <p>Amount: {{$product->price}}</p>
-                        <p>Total amount: {{$data['total']}}</p>
-                        <p>{{$product->id}}</p>
+                        <p>Shipping fee: #{{$data['fee']}}</p>
+                        <p>Amount: #{{$product->price}}</p>
+                        <p>Total amount: #{{$data['total']}}</p>
                     </h1>
                     @if(Auth::user())
                         <form action="{{ route('pay') }}" class="" method="post" accept-charset="UTF-8" class="form-horizontal" role="form">

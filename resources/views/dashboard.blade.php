@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="card-footer text-white">
                                         <a href="/product" class="d-flex text-white justify-content-between nav-link">
-                                            View Details <i class="fa fa-2x text-dark"></i></a>
+                                            View Details <i class="fa fa-arrow-right orange"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -71,22 +71,11 @@
                                         <h3 class="card-text">Add New Product</h3>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="/order" class="d-flex text-white justify-content-between nav-link">
+                                        <a href="/product/create" class="d-flex text-white justify-content-between nav-link">
                                             Open... <i class="fa fa-arrow-right orange"></i></a>
                                     </div>
                                 </div>
                             </div>
-{{--                                <li class="list-group-item list-group-item-action d-flex justify-content-between">All Orders--}}
-{{--                                    <span class="badge badge-secondary" style="font-size: large;">{{$orders_count}}</span> </li>--}}
-{{--                                <a href="/order" class="d-flex justify-content-between bg-secondary nav-link text-white">--}}
-{{--                                    View Details <i class="fa fa-arrow-right orange"></i></a>--}}
-
-{{--                            <div class="col-lg-4 col-md-4 mb-3 ">--}}
-{{--                                <li class="list-group-item list-group-item-action list-group-item-danger text-dark d-flex justify-content-between">--}}
-{{--                                    Categories<span class="badge badge-danger" style="font-size: large;">{{$categories_count}}</span> </li>--}}
-{{--                                <a href="/category" class="d-flex justify-content-between bg-danger nav-link text-white">--}}
-{{--                                    View Details <i class="fa fa-arrow-right"></i></a>--}}
-{{--                            </div>--}}
                         </div>
                     </div>
                 </div>

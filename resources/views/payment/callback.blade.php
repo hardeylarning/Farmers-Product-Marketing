@@ -11,6 +11,11 @@
                             <div class="container mt-3">
                                 <img src="{{ asset('images/success_edit.png')}}" class="" width="200" height=200" alt="">
                                 <p class="text-center mt-2">Payment was successful <span>Your order will be shipped shortly</span></p>
+                                <script>
+                                    setTimeout(function () {
+                                        window.location.href = "/home"
+                                    }, 5000)
+                                </script>
                             </div>
                         @else
                             <div class="container mt-3">

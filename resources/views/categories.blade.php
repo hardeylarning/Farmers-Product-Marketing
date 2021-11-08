@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1 class="text-center bg-dark text-white font-weight-bolder p-3 my-5">Category</h1>
+        <h1 class="text-center bg-dark text-white font-weight-bolder p-3 my-5">{{ $cat }}</h1>
         <div class="row justify-content-center">
             @forelse($products as $product)
                 <div class="col-lg-3 col-md-4 mr-2 mb-3">
